@@ -14,6 +14,7 @@ const Header = ({ logoTagName = "div" }) => {
         border-black 
         border-b-5 md:border-b-[10px]
         max-w-[1080px] mx-auto
+        font-futura
       `)}
     >
       {/* 
