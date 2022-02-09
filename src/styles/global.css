@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-base font-sans;
+  }
+  a {
+    @apply underline outline-none;
+  }
+  a:focus,
+  a:active {
+    @apply ring-4 ring-orange-600 rounded-sm;
+  }
+  a:active {
+    @apply bg-orange-900/20;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    :focus {
+      transition: box-shadow 0.25s ease;
+    }
+  }
+}
+@layer utilities {
+  .zudo-hash {
+    letter-spacing: 0.15em;
+  }
+  .zudo-invert-color-link {
+    @apply text-shadow-md;
+  }
+  .zudo-invert-color-link:hover,
+  .zudo-invert-color-link:focus,
+  .zudo-invert-color-link--focus {
+    @apply text-white bg-black text-shadow-none no-underline;
+    @apply ring-4 rounded-sm ring-orange-600;
+  }
+  .zudo-invert-color-link:active {
+    @apply text-white bg-orange-900/75;
+  }
+
+  .zudo-invert-color-link-inline {
+    @apply text-shadow-md;
+  }
+  .zudo-invert-color-link-inline:hover,
+  .zudo-invert-color-link-inline:active,
+  .zudo-invert-color-link-inline:focus {
+    @apply text-white bg-black text-shadow-none no-underline;
+  }
+}
